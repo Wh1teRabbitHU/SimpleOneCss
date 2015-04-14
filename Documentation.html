@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SimpleOneCss - Documentation + Test page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css" charset="utf-8">
+    <link rel="stylesheet" href="css/simple_one.css" charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>SimpleOneCss - Documentation + Test page</h1>
+    </header>
+    <div class="main-container">
+        <hr/>
+        <h2>Buttons</h2>
+        <hr/>
+        <div class="feature">
+            <h3>Button colors</h3>
+            <button type="button" class="btn">Default</button>
+            <button type="button" class="btn warning">Warning</button>
+            <button type="button" class="btn error">Error</button>
+            <button type="button" class="btn info">Info</button>
+            <button type="button" class="btn success">Success</button>
+            <button type="button" class="btn primary">Primary</button>
+        </div>
+        <div class="feature">
+            <h3>Disabled buttons</h3>
+            <button type="button" class="btn" disabled="disabled">Default</button>
+            <button type="button" class="btn warning" disabled="disabled">Warning</button>
+            <button type="button" class="btn error" disabled="disabled">Error</button>
+            <button type="button" class="btn info" disabled="disabled">Info</button>
+            <button type="button" class="btn success" disabled="disabled">Success</button>
+            <button type="button" class="btn primary" disabled="disabled">Primary</button>
+        </div>
+        <div class="feature">
+            <h3>Button size</h3>
+            <button type="button" class="btn primary xs-sized">XS-sized</button>
+            <button type="button" class="btn primary s-sized">S-sized</button>
+            <button type="button" class="btn primary">Normal</button>
+            <button type="button" class="btn primary l-sized">L-sized</button>
+            <button type="button" class="btn primary xl-sized">XL-sized</button>
+        </div>
+        <div class="feature">
+            <h3>Button tooltip</h3>
+            <button type="button" class="btn" title="Default tooltip">Default</button>
+            <button type="button" class="btn warning" title="Warning tooltip">Warning</button>
+            <button type="button" class="btn error" title="Error tooltip">Error</button>
+            <button type="button" class="btn info" title="Info tooltip">Info</button>
+            <button type="button" class="btn success" title="Success tooltip">Success</button>
+            <button type="button" class="btn primary" title="Primary tooltip">Primary</button>
+        </div>
+        <hr/>
+        <h2>Inputs</h2>
+        <hr/>
+        <div class="feature">
+            <h3>Form colors</h3>
+            <div class="form-container">
+                <input type="text" name="test" class="input" placeholder="Default" />
+                <input type="text" name="test" class="input invalid" placeholder="Invalid" />
+                <input type="text" name="test" class="input valid" placeholder="Valid" />
+                <input type="text" name="test" class="input optional" placeholder="Optional" />
+                <input type="text" name="test" class="input required" placeholder="Required" />
+                <input type="text" name="test" class="input warning" placeholder="Warning" />
+            </div>
+        </div>
+        <div class="feature">
+            <h3>Form size</h3>
+            <div class="form-container">
+                <input type="text" name="test" class="input xs-sized" placeholder="XS-sized" />
+                <input type="text" name="test" class="input s-sized" placeholder="S-sized" />
+                <input type="text" name="test" class="input" placeholder="Normal" />
+                <input type="text" name="test" class="input l-sized" placeholder="L-sized" />
+                <input type="text" name="test" class="input xl-sized" placeholder="XL-sized" />
+            </div>
+        </div>
+        <div class="feature">
+            <h3>Form with container</h3>
+            <div class="form-container">
+                <label class="label" for="default">For default</label>
+                <input type="text" id="default" name="test" class="input" placeholder="Default" />
+            </div>
+            <div class="form-container invalid">
+                <label class="label" for="invalid">For invalid</label>
+                <input type="text" id="invalid" name="test" class="input" placeholder="Invalid" />
+            </div>
+            <div class="form-container valid">
+                <label class="label" for="valid">For valid</label>
+                <input type="text" id="valid" name="test" class="input" placeholder="Valid" />
+            </div>
+            <div class="form-container optional">
+                <label class="label" for="optional">For optional</label>
+                <input type="text" id="optional" name="test" class="input" placeholder="Optional" />
+            </div>
+            <div class="form-container required">
+                <label class="label" for="required">For required</label>
+                <input type="text" id="required" name="test" class="input" placeholder="Required" />
+            </div>
+            <div class="form-container warning">
+                <label class="label" for="warning">For warning</label>
+                <input type="text" id="warning" name="test" class="input" placeholder="Warning" />
+            </div>
+        </div>
+        <div class="feature">
+            <h3>Form with container - inline</h3>
+            <div class="form-container inline">
+                <label class="label xs-sized" for="default_inline">XSmall</label>
+                <input type="text" id="default_inline" name="test" class="input" placeholder="Default" />
+            </div>
+            <div class="form-container invalid inline">
+                <label class="label s-sized" for="invalid_inline">Small</label>
+                <input type="text" id="invalid_inline" name="test" class="input" placeholder="Invalid" />
+            </div>
+            <div class="form-container valid inline">
+                <label class="label" for="valid_inline">Default valid</label>
+                <input type="text" id="valid_inline" name="test" class="input" placeholder="Valid" />
+            </div>
+            <div class="form-container optional inline">
+                <label class="label l-sized" for="optional_inline">For optional - l-sized</label>
+                <input type="text" id="optional_inline" name="test" class="input" placeholder="Optional" />
+            </div>
+            <div class="form-container required inline">
+                <label class="label xl-sized" for="required_inline">For required - xl-sized</label>
+                <input type="text" id="required_inline" name="test" class="input" placeholder="Required" />
+            </div>
+            <div class="form-container warning inline">
+                <label class="label text-right" for="warning_inline">Right align</label>
+                <input type="text" id="warning_inline" name="test" class="input" placeholder="Warning" />
+            </div>
+        </div>
+        <hr/>
+        <h2>Planned features:</h2>
+        <hr/>
+        <ul class="list">
+            <li>More inputs (Dropdown, checkbox, radiobutton, textarea)</li>
+            <li>Tables</li>
+            <li>Menus</li>
+            <li>Lists ( Better than this ;) )</li>
+            <li>Responsive utilities</li>
+            <li>Navigations, tabs, breadcumbs</li>
+            <li>Pagination</li>
+            <li>Labels</li>
+            <li>Containers</li>
+            <li>Alerts</li>
+            <li>Progress bars</li>
+            <li>And other fancy stuffs... ! :)</li>
+        </ul>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

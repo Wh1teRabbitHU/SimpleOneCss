@@ -1,0 +1,1 @@
+sass --style compressed --no-cache css/simple_one.css.scss css/simple_one.min.css

@@ -1,0 +1,66 @@
+/*
+ *	Its not part of the framework! Only for test purpose!	
+ */
+
+$gray: #4f4f4f;
+$light-gray: #c1c1c1;
+
+body {
+	margin: 0;
+}
+
+header {
+	text-align: center;
+	margin: 0;
+	height: 150px;
+	width: 100%;
+	background-color: $gray;
+	color: white;
+}
+
+h1 {
+	padding: 50px;
+	margin: 0;
+}
+
+h2 {
+	padding: 10px;
+	text-align: center;
+}
+
+hr {
+	width: 90%;
+	margin: 30px auto;
+	color: $light-gray;
+	border-style: solid;
+}
+
+.main-container {
+	padding-bottom: 100px;
+	max-width: 1024px;
+	margin: auto;
+}
+
+.feature {
+	padding: 10px;
+	width: 80%;
+	margin: auto;
+}
+
+//Temporary
+.list {
+	list-style-type: none;
+	width: 80%;
+	margin: 8px auto;
+
+	li {
+		padding: 6px 12px;
+		margin: 12px;
+		border: 1px solid $light-gray;
+		border-radius: 4px;
+
+		&:hover {
+			background-color: lighten($light-gray, 20%);
+		}
+	}
+}
