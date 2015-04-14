@@ -1,0 +1,223 @@
+/*
+ * SimpleOneCss - A lightweight css3 framework
+ * 
+ * Created by : White Rabbit
+ *
+ * This is the uncompiled version. Use it, if you have the proper compiler!
+ * Otherwise choose the one with the same name and css extension or the minified version.
+ *
+ */
+
+//VARIABLES
+$white: #ffffff;
+$gray: #4f4f4f;
+$light-gray: #c1c1c1;
+$green: #2B9464;
+$yellow: #FFC300;
+$red: #f73500;
+$light-blue: #00C8F8;
+$dark-blue: #3B5998;
+
+$font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+$btn-types:   (primary: $dark-blue, info: $light-blue, warning: $yellow, error: $red, success: $green);
+$input-types: (required: $dark-blue, optional: $light-blue, warning: $yellow, invalid: $red, valid: $green);
+$sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
+
+//
+// MIXINS
+//
+// COLORS
+@mixin btn-colors($color) {
+	border-color: $color;
+	color: $color;
+		
+	&:hover {
+		background-color: $color;
+		color: $white;
+		position: relative;
+
+		&[title]:before {
+			content: attr(title);
+			position: absolute;
+			padding: 10px;
+			left: -25%; 
+			bottom: 120%;
+			width: 150%;
+			z-index: 10;
+			border: 1px solid $color;
+			border-radius: 6px;
+			background-color: $white;
+			color: $color;
+		}
+	}
+
+	&:active {
+		transition-duration: 0.2s;
+		background-color: lighten($color, 20%);
+		color: $white;
+	}
+
+	&:disabled {
+		background-color: transparent;
+		border-color: lighten($color, 25%);
+		color: lighten($color, 25%);
+		cursor: no-drop;
+	}
+}
+
+@mixin input-colors($color) {
+	border-color: $color;
+
+	@include placeholder-color($color);
+
+	&:focus {
+		@include box-shadow(0px, 0px, 10px, 0px, $color);
+		@include placeholder-color(transparent);
+	}
+}
+
+@mixin label-colors($color) {
+	color: $color;
+}
+
+@mixin placeholder-color($color) {
+	&::-webkit-input-placeholder {
+		transition-duration: 0.2s;
+		color: $color;
+	}
+	&::-moz-placeholder { 
+		transition-duration: 0.2s;
+		color: $color;
+	}
+	&:-ms-input-placeholder { 
+		transition-duration: 0.2s;
+		color: $color;
+	}
+}
+
+// SIZE
+@mixin btn-size($size) {
+	padding: 2px + (2px * $size) 4px + (4px * $size);
+	border-width: 1px + (1px * $size);
+	border-radius: 2px + (2px * $size);
+	font-size: 0.75em + (0.25em * $size);
+}
+
+@mixin input-size($size){
+	width: 50px + (100px * $size);
+}
+
+@mixin label-size($size){
+	width: 60px + (40px * $size);
+}
+
+// OTHERS
+/*
+*	$hl => Horizontal length
+*	$vl => Vertical length
+*	$br => Blur radius
+*	$sr => Spread radius
+*/
+@mixin box-shadow($hl, $vl, $br, $sr, $color) {
+	-webkit-box-shadow: $hl $vl $br $sr $color;
+	-moz-box-shadow: $hl $vl $br $sr $color;
+	box-shadow: $hl $vl $br $sr $color;
+}
+
+//
+// STYLE ELEMENTS
+//
+// BUTTONS
+.btn {
+	background-color: transparent;
+	cursor: pointer;
+	border-style: solid;
+	outline: 0;
+	font-family: $font-family;
+	transition-duration: 0.3s;
+
+	@include btn-size(3);
+	@include btn-colors($gray);
+
+	@each $class, $size in $sizes {
+		&.#{$class} {
+			@include btn-size($size);
+		}
+	}
+
+	@each $class, $color in $btn-types {
+		&.#{$class} {
+			@include btn-colors($color);
+		}
+	}
+}
+
+//Forms
+.input {
+	margin: 6px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 1em;
+	display: block;
+	outline: 0;
+	transition-duration: 0.3s;
+
+	@include input-colors($light-gray);
+	@include input-size(3);
+
+	@each $class, $size in $sizes {
+		&.#{$class},
+		.form-container.#{$class} & {
+			@include input-size($size);
+		}
+	}
+
+	@each $class, $color in $input-types {
+		&.#{$class},
+		.form-container.#{$class} & {
+			@include input-colors($color);
+		}
+	}
+}
+
+.label {
+	text-align: left;
+	padding-left: 15px;
+
+	@include label-size(3);
+
+	&.text-right {
+		text-align: right;
+	}
+
+	@each $class, $size in $sizes {
+		&.#{$class},
+		.form-container.#{$class} & {
+			@include label-size($size);
+		}
+	}
+
+	@each $class, $color in $input-types {
+		&.#{$class},
+		.form-container.#{$class} & {
+			@include label-colors($color);
+		}
+	}
+}
+
+.input,
+.label {
+
+	&.inline,
+	.form-container.inline & {
+		display: inline-block;
+	}
+}
+
+.form-container {
+	font-family: $font-family;
+	padding: 6px 0;
+}
