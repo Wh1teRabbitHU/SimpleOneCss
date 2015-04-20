@@ -11,6 +11,8 @@
 //VARIABLES
 $white: #ffffff;
 $gray: #4f4f4f;
+$dirty-white: #eaeaea;
+$hover-gray: #9f9f9f;
 $light-gray: #c1c1c1;
 $green: #2B9464;
 $yellow: #FFC300;
@@ -22,6 +24,7 @@ $font-family: "Trebuchet MS", Helvetica, sans-serif;
 
 $btn-types:   (primary: $dark-blue, info: $light-blue, warning: $yellow, error: $red, success: $green);
 $input-types: (required: $dark-blue, optional: $light-blue, warning: $yellow, invalid: $red, valid: $green);
+$table-types: (active: $gray, info: $light-blue, warning: $yellow, danger: $red, success: $green);
 $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 //
@@ -53,7 +56,6 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	}
 
 	&:active {
-		transition-duration: 0.2s;
 		background-color: lighten($color, 20%);
 		color: $white;
 	}
@@ -71,8 +73,9 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 	@include placeholder-color($color);
 
-	&:focus {
-		@include box-shadow(0px, 0px, 10px, 0px, $color);
+	&:focus:not([type='checkbox']):not([type='radio']),
+	 {
+		@include box-shadow(0px 0px 10px 0px $color);
 		@include placeholder-color(transparent);
 	}
 }
@@ -81,17 +84,32 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	color: $color;
 }
 
+@mixin table-colors($color) {
+	background-color: lighten($color, 36%);
+	
+	& td {
+		border-color: white;
+	}
+}
+
+@mixin table-hover-colors($color) {
+	&:hover {
+		background-color: lighten($color, 25%);
+	}
+}
+
+// It need 4KB space in minified version after generated all possible transition-duration, so i commented it out!
 @mixin placeholder-color($color) {
 	&::-webkit-input-placeholder {
-		transition-duration: 0.2s;
+		//@include transition-duration(0.2s);
 		color: $color;
 	}
 	&::-moz-placeholder { 
-		transition-duration: 0.2s;
+		//@include transition-duration(0.2s);
 		color: $color;
 	}
 	&:-ms-input-placeholder { 
-		transition-duration: 0.2s;
+		//@include transition-duration(0.2s);
 		color: $color;
 	}
 }
@@ -106,6 +124,18 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 @mixin input-size($size){
 	width: 50px + (100px * $size);
+
+	&[type='checkbox'],
+	&[type='radio'] {
+		margin-left: 15px * $size - 170px;
+		margin-right: 15px * $size - 145px;
+
+		&.inline,
+		.form-container.inline & {
+			width: 50px * $size + 150px;
+			padding: 6px 12px;
+		}
+	}
 }
 
 @mixin label-size($size){
@@ -119,10 +149,24 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 *	$br => Blur radius
 *	$sr => Spread radius
 */
-@mixin box-shadow($hl, $vl, $br, $sr, $color) {
-	-webkit-box-shadow: $hl $vl $br $sr $color;
-	-moz-box-shadow: $hl $vl $br $sr $color;
-	box-shadow: $hl $vl $br $sr $color;
+@mixin box-shadow($value...) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+@mixin transition-duration($duration) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	transition-duration: $duration; 
+}
+
+@mixin transition($value...) {
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-o-transition: $value;
+	transition: $value; 
 }
 
 //
@@ -135,7 +179,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	border-style: solid;
 	outline: 0;
 	font-family: $font-family;
-	transition-duration: 0.3s;
+	@include transition-duration(0.3s);
 
 	@include btn-size(3);
 	@include btn-colors($gray);
@@ -155,7 +199,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 //Forms
 .input {
-	margin: 6px;
+	margin: 12px;
 	padding: 6px 12px;
 	border-radius: 4px;
 	border-style: solid;
@@ -163,7 +207,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	font-size: 1em;
 	display: block;
 	outline: 0;
-	transition-duration: 0.3s;
+	@include transition-duration(0.3s);
 
 	@include input-colors($light-gray);
 	@include input-size(3);
@@ -217,7 +261,77 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	}
 }
 
+textarea.input {
+	@include transition(box-shadow 0.3s, -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s);
+}
+
 .form-container {
 	font-family: $font-family;
 	padding: 6px 0;
+}
+
+.table {
+	text-align: left;
+	width: 100%;
+	border-spacing: 0;
+
+	& th {
+		border-bottom: 2px solid $light-gray;
+	}
+
+	& td {
+		border-bottom: 1px solid $light-gray;
+	}
+
+	& td, & th {
+		padding: 6px 10px;
+	}
+
+	@each $class, $color in $table-types {
+		& tr.#{$class} {
+			@include table-colors($color);
+		}
+	}
+
+	&.hover {
+
+		& tbody > tr {
+			@include table-hover-colors($hover-gray);
+		}
+
+		@each $class, $color in $table-types {
+			& tr.#{$class} {
+				@include table-hover-colors($color);
+			}
+		}
+	}
+
+	&.stripped {
+
+		& tbody > tr:nth-child(2n+0) {
+			background-color: lighten($dirty-white, 5%);
+		}
+	}
+
+	&.bordered {
+
+		& th {
+			border-top: 1px solid $light-gray;
+			border-left: 1px solid $light-gray;
+			border-bottom: 2px solid $light-gray;
+
+			&:last-child {
+				border-right: 1px solid $light-gray;
+			}
+		}
+
+		& tbody td {
+			border-left: 1px solid $light-gray;
+			border-bottom: 1px solid $light-gray;
+
+			&:last-child {
+				border-right: 1px solid $light-gray;
+			}
+		}
+	}
 }
