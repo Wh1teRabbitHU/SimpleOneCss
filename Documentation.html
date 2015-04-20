@@ -55,7 +55,7 @@
         <h2>Inputs</h2>
         <hr/>
         <div class="feature">
-            <h3>Form colors</h3>
+            <h3>Input colors</h3>
             <div class="form-container">
                 <input type="text" name="test" class="input" placeholder="Default" />
                 <input type="text" name="test" class="input invalid" placeholder="Invalid" />
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="feature">
-            <h3>Form size</h3>
+            <h3>Input size</h3>
             <div class="form-container">
                 <input type="text" name="test" class="input xs-sized" placeholder="XS-sized" />
                 <input type="text" name="test" class="input s-sized" placeholder="S-sized" />
@@ -76,7 +76,7 @@
             </div>
         </div>
         <div class="feature">
-            <h3>Form with container</h3>
+            <h3>Input with container</h3>
             <div class="form-container">
                 <label class="label" for="default">For default</label>
                 <input type="text" id="default" name="test" class="input" placeholder="Default" />
@@ -103,7 +103,7 @@
             </div>
         </div>
         <div class="feature">
-            <h3>Form with container - inline</h3>
+            <h3>Input with container - inline</h3>
             <div class="form-container inline">
                 <label class="label xs-sized" for="default_inline">XSmall</label>
                 <input type="text" id="default_inline" name="test" class="input" placeholder="Default" />
@@ -129,12 +129,310 @@
                 <input type="text" id="warning_inline" name="test" class="input" placeholder="Warning" />
             </div>
         </div>
+        <div class="feature">
+            <h3>Other kind of inputs</h3>
+            <div class="form-container">
+                <input type="number" name="number" class="input" placeholder="Number" />
+                <input type="password" name="password" class="input" placeholder="Password" />
+                <input type="date" name="date" class="input" placeholder="Date" />
+                <input type="file" name="file" class="input" placeholder="File" />
+                <textarea class="input">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </textarea>
+            </div>
+            <h3>Checkboxs, radio </h3>
+            <div class="form-container">
+                <label class="label" for="single-checkbox">Single checkbox</label>
+                <input type="checkbox" name="checkbox" class="input" id="single-checkbox" />
+                <label class="label" for="single-radio">Single radio</label>
+                <input type="radio" name="radio" class="input" id="single-radio" />
+            </div>
+            <div class="form-container inline">
+                <label class="label" for="multi-checkbox-xs">X-Small</label>
+                <input type="checkbox" name="checkbox" class="input xs-sized" id="multi-checkbox-xs" />
+            </div>
+            <div class="form-container inline">
+                <label class="label" for="multi-checkbox-s">Small</label>
+                <input type="checkbox" name="checkbox" class="input s-sized" id="multi-checkbox-s" />
+            </div>
+            <div class="form-container inline">
+                <label class="label" for="multi-checkbox">Normal checkbox</label>
+                <input type="checkbox" name="checkbox" class="input" id="multi-checkbox" />
+            </div>
+            <div class="form-container inline">
+                <label class="label" for="multi-checkbox-l">Large</label>
+                <input type="checkbox" name="checkbox" class="input l-sized" id="multi-checkbox-l" />
+            </div>
+            <div class="form-container inline">
+                <label class="label" for="multi-checkbox-xl">X-Large</label>
+                <input type="checkbox" name="checkbox" class="input xl-sized" id="multi-checkbox-xl" />
+            </div>
+        </div>
+        <hr/>
+        <h2>Tables</h2>
+        <hr/>
+        <div class="feature">
+            <h3>Table default</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="feature">
+            <h3>Table stripped</h3>
+            <table class="table stripped">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="feature">
+            <h3>Table hover</h3>
+            <table class="table hover">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="feature">
+            <h3>Table bordered</h3>
+            <table class="table bordered">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="feature">
+            <h3>Table status</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>Medium</td>
+                        <td>2.01</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr class="active">
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr class="info">
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr class="warning">
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                    <tr class="success">
+                        <td>Budapest</td>
+                        <td>Medium</td>
+                        <td>2.23</td>
+                        <td>E</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="feature">
+            <h3>Table status with hover</h3>
+            <table class="table hover">
+                <thead>
+                    <tr>
+                        <th>Alpha</th>
+                        <th>Beta</th>
+                        <th>Gamma</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>Medium</td>
+                        <td>2.01</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr class="active">
+                        <td>London</td>
+                        <td>Medium</td>
+                        <td>2.11</td>
+                        <td>A</td>
+                    </tr>
+                    <tr class="info">
+                        <td>New York</td>
+                        <td>Small</td>
+                        <td>1.19</td>
+                        <td>B</td>
+                    </tr>
+                    <tr class="warning">
+                        <td>Paris</td>
+                        <td>Small</td>
+                        <td>1.92</td>
+                        <td>G</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>Rome</td>
+                        <td>Big</td>
+                        <td>2.2</td>
+                        <td>D</td>
+                    </tr>
+                    <tr class="success">
+                        <td>Budapest</td>
+                        <td>Medium</td>
+                        <td>2.23</td>
+                        <td>E</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <hr/>
         <h2>Planned features:</h2>
         <hr/>
         <ul class="list">
-            <li>More inputs (Dropdown, checkbox, radiobutton, textarea)</li>
-            <li>Tables</li>
             <li>Menus</li>
             <li>Lists ( Better than this ;) )</li>
             <li>Responsive utilities</li>
