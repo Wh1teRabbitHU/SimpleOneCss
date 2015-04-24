@@ -1,6 +1,6 @@
 /*
  * SimpleOneCss - A lightweight css3 framework
- * 
+ *
  * Created by : White Rabbit
  *
  * This is the uncompiled version. Use it, if you have the proper compiler!
@@ -595,5 +595,29 @@ input.toggle[type='checkbox'] {
     .navbar .hover ~ .submenu:hover .active {
       border-left: 2px solid #4f4f4f;
       background-color: #c1c1c1; }
+
+.list {
+  list-style-type: none;
+  padding: 16px 8px; }
+  .list li {
+    padding: 12px 24px;
+    margin: 12px; }
+  .list.border li {
+    border: 1px solid #c1c1c1;
+    border-radius: 4px; }
+  .list.border.hover li:hover {
+    background-color: #f4f4f4; }
+  .list.box {
+    padding: 32px 16px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px; }
+    .list.box li {
+      border-bottom: 1px solid rgba(193, 193, 193, 0.5);
+      margin: 0 12px;
+      padding: 16px 24px; }
+      .list.box li:first-of-type {
+        border-top: 1px solid rgba(193, 193, 193, 0.5); }
+    .list.box.hover li:hover {
+      background-color: #f4f4f4; }
 
 /*# sourceMappingURL=simple_one.css.map */

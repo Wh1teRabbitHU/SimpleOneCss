@@ -1,6 +1,6 @@
 /*
  * SimpleOneCss - A lightweight css3 framework
- * 
+ *
  * Created by : White Rabbit
  *
  * This is the uncompiled version. Use it, if you have the proper compiler!
@@ -44,7 +44,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 			content: attr(title);
 			position: absolute;
 			padding: 10px;
-			left: -25%; 
+			left: -25%;
 			bottom: 120%;
 			width: 150%;
 			z-index: 10;
@@ -104,11 +104,11 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 		//@include transition-duration(0.2s);
 		color: $color;
 	}
-	&::-moz-placeholder { 
+	&::-moz-placeholder {
 		//@include transition-duration(0.2s);
 		color: $color;
 	}
-	&:-ms-input-placeholder { 
+	&:-ms-input-placeholder {
 		//@include transition-duration(0.2s);
 		color: $color;
 	}
@@ -159,14 +159,14 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	-webkit-transition-duration: $duration;
 	-moz-transition-duration: $duration;
 	-o-transition-duration: $duration;
-	transition-duration: $duration; 
+	transition-duration: $duration;
 }
 
 @mixin transition($value...) {
 	-webkit-transition: $value;
 	-moz-transition: $value;
 	-o-transition: $value;
-	transition: $value; 
+	transition: $value;
 }
 
 //
@@ -509,7 +509,49 @@ input.toggle[type='checkbox'] {
 
 		.active {
 			border-left: 2px solid $gray;
-			background-color: $light-gray;	
+			background-color: $light-gray;
+		}
+	}
+}
+
+.list {
+	list-style-type: none;
+	padding: 16px 8px;
+
+	li {
+		padding: 12px 24px;
+		margin: 12px;
+	}
+
+	&.border {
+
+		li {
+			border: 1px solid $light-gray;
+			border-radius: 4px;
+		}
+
+		&.hover li:hover {
+			background-color: lighten($light-gray, 20%);
+		}
+	}
+
+	&.box {
+		padding: 32px 16px;
+		border: 1px solid $light-gray;
+		border-radius: 4px;
+
+		li {
+			border-bottom: 1px solid transparentize($light-gray, 0.5);
+			margin: 0 12px;
+			padding: 16px 24px;
+
+			&:first-of-type {
+				border-top: 1px solid transparentize($light-gray, 0.5);
+			}
+		}
+
+		&.hover li:hover {
+			background-color: lighten($light-gray, 20%);
 		}
 	}
 }
