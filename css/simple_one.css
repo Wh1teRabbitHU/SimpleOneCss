@@ -13,7 +13,7 @@
 *	$br => Blur radius
 *	$sr => Spread radius
 */
-.btn {
+.btn, .navtab .tab-label {
   background-color: transparent;
   cursor: pointer;
   border-style: solid;
@@ -29,11 +29,11 @@
   font-size: 1.5em;
   border-color: #4f4f4f;
   color: #4f4f4f; }
-  .btn:hover {
+  .btn:hover, .navtab .tab-label:hover {
     background-color: #4f4f4f;
     color: #ffffff;
     position: relative; }
-    .btn:hover[title]:before {
+    .btn:hover[title]:before, .navtab .tab-label:hover[title]:before {
       content: attr(title);
       position: absolute;
       padding: 10px;
@@ -45,42 +45,42 @@
       border-radius: 6px;
       background-color: #ffffff;
       color: #4f4f4f; }
-  .btn:active {
+  .btn:active, .navtab .tab-label:active {
     background-color: #828282;
     color: #ffffff; }
-  .btn:disabled {
+  .btn:disabled, .navtab .tab-label:disabled {
     background-color: transparent;
     border-color: #8f8f8f;
     color: #8f8f8f;
     cursor: no-drop; }
-  .btn.xs-sized {
+  .btn.xs-sized, .navtab .xs-sized.tab-label {
     padding: 4px 8px;
     border-width: 2px;
     border-radius: 4px;
     font-size: 1em; }
-  .btn.s-sized {
+  .btn.s-sized, .navtab .s-sized.tab-label {
     padding: 6px 12px;
     border-width: 3px;
     border-radius: 6px;
     font-size: 1.25em; }
-  .btn.l-sized {
+  .btn.l-sized, .navtab .l-sized.tab-label {
     padding: 10px 20px;
     border-width: 5px;
     border-radius: 10px;
     font-size: 1.75em; }
-  .btn.xl-sized {
+  .btn.xl-sized, .navtab .xl-sized.tab-label {
     padding: 12px 24px;
     border-width: 6px;
     border-radius: 12px;
     font-size: 2em; }
-  .btn.primary {
+  .btn.primary, .navtab .primary.tab-label {
     border-color: #3B5998;
     color: #3B5998; }
-    .btn.primary:hover {
+    .btn.primary:hover, .navtab .primary.tab-label:hover {
       background-color: #3B5998;
       color: #ffffff;
       position: relative; }
-      .btn.primary:hover[title]:before {
+      .btn.primary:hover[title]:before, .navtab .primary.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
         padding: 10px;
@@ -92,22 +92,22 @@
         border-radius: 6px;
         background-color: #ffffff;
         color: #3B5998; }
-    .btn.primary:active {
+    .btn.primary:active, .navtab .primary.tab-label:active {
       background-color: #718dc8;
       color: #ffffff; }
-    .btn.primary:disabled {
+    .btn.primary:disabled, .navtab .primary.tab-label:disabled {
       background-color: transparent;
       border-color: #839ccf;
       color: #839ccf;
       cursor: no-drop; }
-  .btn.info {
+  .btn.info, .navtab .info.tab-label {
     border-color: #00C8F8;
     color: #00C8F8; }
-    .btn.info:hover {
+    .btn.info:hover, .navtab .info.tab-label:hover {
       background-color: #00C8F8;
       color: #ffffff;
       position: relative; }
-      .btn.info:hover[title]:before {
+      .btn.info:hover[title]:before, .navtab .info.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
         padding: 10px;
@@ -119,22 +119,22 @@
         border-radius: 6px;
         background-color: #ffffff;
         color: #00C8F8; }
-    .btn.info:active {
+    .btn.info:active, .navtab .info.tab-label:active {
       background-color: #5fe0ff;
       color: #ffffff; }
-    .btn.info:disabled {
+    .btn.info:disabled, .navtab .info.tab-label:disabled {
       background-color: transparent;
       border-color: #78e5ff;
       color: #78e5ff;
       cursor: no-drop; }
-  .btn.warning {
+  .btn.warning, .navtab .warning.tab-label {
     border-color: #FFC300;
     color: #FFC300; }
-    .btn.warning:hover {
+    .btn.warning:hover, .navtab .warning.tab-label:hover {
       background-color: #FFC300;
       color: #ffffff;
       position: relative; }
-      .btn.warning:hover[title]:before {
+      .btn.warning:hover[title]:before, .navtab .warning.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
         padding: 10px;
@@ -146,22 +146,22 @@
         border-radius: 6px;
         background-color: #ffffff;
         color: #FFC300; }
-    .btn.warning:active {
+    .btn.warning:active, .navtab .warning.tab-label:active {
       background-color: #ffdb66;
       color: #ffffff; }
-    .btn.warning:disabled {
+    .btn.warning:disabled, .navtab .warning.tab-label:disabled {
       background-color: transparent;
       border-color: #ffe180;
       color: #ffe180;
       cursor: no-drop; }
-  .btn.error {
+  .btn.error, .navtab .error.tab-label {
     border-color: #f73500;
     color: #f73500; }
-    .btn.error:hover {
+    .btn.error:hover, .navtab .error.tab-label:hover {
       background-color: #f73500;
       color: #ffffff;
       position: relative; }
-      .btn.error:hover[title]:before {
+      .btn.error:hover[title]:before, .navtab .error.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
         padding: 10px;
@@ -173,22 +173,22 @@
         border-radius: 6px;
         background-color: #ffffff;
         color: #f73500; }
-    .btn.error:active {
+    .btn.error:active, .navtab .error.tab-label:active {
       background-color: #ff815e;
       color: #ffffff; }
-    .btn.error:disabled {
+    .btn.error:disabled, .navtab .error.tab-label:disabled {
       background-color: transparent;
       border-color: #ff9578;
       color: #ff9578;
       cursor: no-drop; }
-  .btn.success {
+  .btn.success, .navtab .success.tab-label {
     border-color: #2B9464;
     color: #2B9464; }
-    .btn.success:hover {
+    .btn.success:hover, .navtab .success.tab-label:hover {
       background-color: #2B9464;
       color: #ffffff;
       position: relative; }
-      .btn.success:hover[title]:before {
+      .btn.success:hover[title]:before, .navtab .success.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
         padding: 10px;
@@ -200,10 +200,10 @@
         border-radius: 6px;
         background-color: #ffffff;
         color: #2B9464; }
-    .btn.success:active {
+    .btn.success:active, .navtab .success.tab-label:active {
       background-color: #57ce98;
       color: #ffffff; }
-    .btn.success:disabled {
+    .btn.success:disabled, .navtab .success.tab-label:disabled {
       background-color: transparent;
       border-color: #6bd4a4;
       color: #6bd4a4;
@@ -464,5 +464,136 @@ textarea.input {
     border-bottom: 1px solid #c1c1c1; }
     .table.bordered tbody td:last-child {
       border-right: 1px solid #c1c1c1; }
+
+input.toggle[type='radio'],
+input.toggle[type='checkbox'] {
+  display: none; }
+
+.navtab {
+  position: relative;
+  margin: 16px 16px 100px 16px;
+  padding: 6px;
+  min-height: 100px; }
+  .navtab li {
+    display: inline-block; }
+    .navtab li:first-of-type {
+      margin-left: 40px; }
+  .navtab .tab-content {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 0;
+    left: 0;
+    margin: 14px;
+    padding: 10px;
+    z-index: 10;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: transparent; }
+  .navtab .toggle:checked ~ .tab-content {
+    overflow: auto;
+    border-color: #4f4f4f;
+    height: 100%;
+    color: black; }
+  .navtab .toggle:checked ~ .tab-label {
+    text-decoration: underline; }
+  .navtab.pills .toggle:checked ~ .tab-label {
+    border: 10px solid transparent; }
+  .navtab.tabs .toggle:checked ~ .tab-label {
+    border-bottom: none;
+    z-index: 100;
+    padding-bottom: 14px;
+    border-radius: 8px 8px 0 0; }
+
+.navbar {
+  background-color: #eaeaea;
+  padding-left: 20px; }
+  .navbar.fixed-top, .navbar.fixed-bottom {
+    position: fixed;
+    width: 100%;
+    left: 0; }
+  .navbar.fixed-top {
+    top: 0; }
+  .navbar.fixed-bottom {
+    bottom: 0; }
+  .navbar .menu,
+  .navbar .title {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 32px; }
+  .navbar .title {
+    padding: 16px 24px;
+    font-size: 1.5em; }
+    .navbar .title:hover {
+      text-decoration: underline; }
+  .navbar .menu {
+    padding: 0;
+    list-style-type: none; }
+    .navbar .menu > li {
+      position: relative;
+      display: inline-block; }
+      .navbar .menu > li > a,
+      .navbar .menu > li .dropdown {
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        padding: 24px 16px 16px 16px;
+        color: #4f4f4f;
+        text-decoration: none;
+        border-bottom: 3px solid transparent; }
+        .navbar .menu > li > a:hover,
+        .navbar .menu > li .dropdown:hover {
+          color: white;
+          background-color: #c1c1c1;
+          border-bottom-color: #4f4f4f; }
+      .navbar .menu > li.active > a, .navbar .menu > li.active .dropdown {
+        color: white;
+        background-color: #4f4f4f;
+        border-bottom-color: black; }
+        .navbar .menu > li.active > a:hover, .navbar .menu > li.active .dropdown:hover {
+          background-color: #c1c1c1; }
+  .navbar .toggle ~ .submenu,
+  .navbar .hover ~ .submenu {
+    display: none; }
+  .navbar .dropdown {
+    cursor: pointer; }
+  .navbar .toggle:checked ~ .submenu,
+  .navbar .hover:hover ~ .submenu,
+  .navbar .hover ~ .submenu:hover {
+    display: block;
+    position: absolute;
+    margin-top: 18px;
+    padding: 0;
+    left: 0;
+    top: 100%;
+    border: 1px solid #eaeaea; }
+    .navbar .toggle:checked ~ .submenu li,
+    .navbar .hover:hover ~ .submenu li,
+    .navbar .hover ~ .submenu:hover li {
+      background-color: white;
+      display: inline-block;
+      min-width: 150px;
+      height: 100%;
+      padding: 6px 12px;
+      border: 2px solid transparent; }
+      .navbar .toggle:checked ~ .submenu li a,
+      .navbar .hover:hover ~ .submenu li a,
+      .navbar .hover ~ .submenu:hover li a {
+        padding: 12px 6px;
+        text-decoration: none;
+        color: #4f4f4f; }
+      .navbar .toggle:checked ~ .submenu li:hover,
+      .navbar .hover:hover ~ .submenu li:hover,
+      .navbar .hover ~ .submenu:hover li:hover {
+        border-left: 2px solid #4f4f4f;
+        background-color: #eaeaea; }
+    .navbar .toggle:checked ~ .submenu .active,
+    .navbar .hover:hover ~ .submenu .active,
+    .navbar .hover ~ .submenu:hover .active {
+      border-left: 2px solid #4f4f4f;
+      background-color: #c1c1c1; }
 
 /*# sourceMappingURL=simple_one.css.map */

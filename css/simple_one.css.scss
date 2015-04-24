@@ -179,8 +179,8 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	border-style: solid;
 	outline: 0;
 	font-family: $font-family;
-	@include transition-duration(0.3s);
 
+	@include transition-duration(0.3s);
 	@include btn-size(3);
 	@include btn-colors($gray);
 
@@ -207,8 +207,8 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	font-size: 1em;
 	display: block;
 	outline: 0;
+	
 	@include transition-duration(0.3s);
-
 	@include input-colors($light-gray);
 	@include input-size(3);
 
@@ -332,6 +332,184 @@ textarea.input {
 			&:last-child {
 				border-right: 1px solid $light-gray;
 			}
+		}
+	}
+}
+
+input.toggle[type='radio'],
+input.toggle[type='checkbox'] {
+	display: none;
+}
+
+
+.navtab {
+	position: relative;
+	margin: 16px 16px 100px 16px;
+	padding: 6px;
+	min-height: 100px;
+
+	li {
+		display: inline-block;
+
+		&:first-of-type {
+			margin-left: 40px;
+		}
+	}
+
+	.tab-label {
+		@extend .btn;
+	}
+
+	.tab-content {
+		@include transition-duration(0.5s);
+		position: absolute;
+		height: 0;
+		left: 0;
+		margin: 14px;
+		padding: 10px;
+		z-index: 10;
+		border: 2px solid transparent;
+		border-radius: 10px;
+		color: transparent;
+	}
+
+	.toggle:checked ~ .tab-content {
+		overflow: auto;
+		border-color: $gray;
+		height: 100%;
+		color: black;
+	}
+
+	.toggle:checked ~ .tab-label {
+		text-decoration: underline;
+	}
+
+	&.pills .toggle:checked ~ .tab-label {
+		border: 10px solid transparent;
+	}
+
+	&.tabs .toggle:checked ~ .tab-label {
+		border-bottom: none;
+		z-index: 100;
+		padding-bottom: 14px;
+		border-radius: 8px 8px 0 0;
+	}
+}
+
+.navbar {
+	background-color: $dirty-white;
+	padding-left: 20px;
+
+	&.fixed-top,
+	&.fixed-bottom {
+		position: fixed;
+		width: 100%;
+		left: 0;
+	}
+
+	&.fixed-top {
+		top: 0;
+	}
+
+	&.fixed-bottom {
+		bottom: 0;
+	}
+
+	.menu,
+	.title {
+		display: inline-block;
+		cursor: pointer;
+		margin: 0 32px;
+	}
+
+	.title {
+		padding: 16px 24px;
+		font-size: 1.5em;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.menu {
+		padding: 0;
+		list-style-type: none;
+
+		& > li {
+			position: relative;
+			display: inline-block;
+
+			& > a,
+			.dropdown {
+				@include transition-duration(0.3s);
+				padding: 24px 16px 16px 16px;
+				color: $gray;
+				text-decoration: none;
+				border-bottom: 3px solid transparent;
+
+				&:hover {
+					color: white;
+					background-color: $light-gray;
+					border-bottom-color: $gray;
+				}
+			}
+
+			&.active > a,
+			&.active .dropdown {
+				color: white;
+				background-color: $gray;
+				border-bottom-color: black;
+
+				&:hover {
+					background-color: $light-gray;
+				}
+			}
+		}
+	}
+
+	.toggle ~ .submenu,
+	.hover ~ .submenu {
+		display: none;
+	}
+
+	.dropdown {
+		cursor: pointer;
+	}
+
+	.toggle:checked ~ .submenu,
+	.hover:hover ~ .submenu,
+	.hover ~ .submenu:hover {
+		display: block;
+		position: absolute;
+		margin-top: 18px;
+		padding: 0;
+		left: 0;
+		top: 100%;
+		border: 1px solid $dirty-white;
+
+		li {
+			background-color: lighten($dirty-white, 10%);
+			display: inline-block;
+			min-width: 150px;
+			height: 100%;
+			padding: 6px 12px;
+			border: 2px solid transparent;
+
+			a {
+				padding: 12px 6px;
+				text-decoration: none;
+				color: $gray;
+			}
+
+			&:hover {
+				border-left: 2px solid $gray;
+				background-color: $dirty-white;
+			}
+		}
+
+		.active {
+			border-left: 2px solid $gray;
+			background-color: $light-gray;	
 		}
 	}
 }
