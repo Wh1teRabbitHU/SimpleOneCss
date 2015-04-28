@@ -555,3 +555,51 @@ input.toggle[type='checkbox'] {
 		}
 	}
 }
+
+.outer-1 {
+
+}
+
+@each $i-out in (1, 2, 3, 4, 5) {
+	.outer-#{$i-out} {
+
+		@each $i-in in (1, 2, 3, 4, 5) {
+			.inner-#{$i-in} {
+				width: (100% / $i-out) * $i-in;
+				display: inline-block;
+			}
+		}
+
+		@each $i-in in (1, 2, 3, 4) {
+			.offset-#{$i-in} {
+				margin-left: (100% / $i-out) * $i-in;
+			}
+		}
+	}
+}
+
+.sources {
+	font-family: monospace;
+	counter-reset: section;
+	padding: 12px 18px;
+
+	&.container {
+		border: 1px solid $gray;
+		border-radius: 16px;
+		background-color: $dirty-white;
+	}
+
+	span {
+		white-space: pre-wrap;
+		display: block;
+	}
+
+	&.rownumbers span {
+		counter-increment: section;
+
+		&:before {
+			content: counter(section) ".	";
+			color: $light-gray;
+		}
+	}
+}

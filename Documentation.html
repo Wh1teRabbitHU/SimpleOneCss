@@ -543,13 +543,146 @@
 				<li>Foxtrot square</li>
 			</ul>
 		</div>
-
-
+		<hr/>
+		<h2>Responsive utilities</h2>
+		<hr/>
+		<div class="feature">
+			<h3>Responsive width - inner</h3>
+			<div class="line outer-5">
+				<div class="element inner-1" title="20%"><span>outer-5 - inner-1</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-2" title="40%"><span>outer-5 - inner-2</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-3" title="60%"><span>outer-5 - inner-3</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-4" title="80%"><span>outer-5 - inner-4</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-5" title="100%"><span>outer-5 - inner-5</span></div>
+			</div>
+		</div>
+		<div class="feature">
+			<h3>Responsive width - outer</h3>
+			<div class="line outer-1">
+				<div class="element inner-1" title="100%"><span>outer-1 - inner-1</span></div>
+			</div>
+			<div class="line outer-2">
+				<div class="element inner-1" title="50%"><span>outer-2 - inner-1</span></div>
+			</div>
+			<div class="line outer-3">
+				<div class="element inner-1" title="33%"><span>outer-3 - inner-1</span></div>
+			</div>
+			<div class="line outer-4">
+				<div class="element inner-1" title="25%"><span>outer-4 - inner-1</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-1" title="20%"><span>outer-5 - inner-1</span></div>
+			</div>
+		</div>
+		<div class="feature">
+			<h3>Responsive width - mixed</h3>
+			<div class="line outer-1">
+				<div class="element inner-1" title="100%"><span>outer-1 - inner-1</span></div>
+			</div>
+			<div class="line outer-2">
+				<div class="element inner-1" title="50%"><span>outer-2 - inner-1</span></div><div class="element inner-1" title="50%"><span>outer-2 - inner-1</span></div>
+			</div>
+			<div class="line outer-3">
+				<div class="element inner-1" title="33%"><span>outer-3 - inner-1</span></div><div class="element inner-2" title="66%"><span>outer-3 - inner-2</span></div>
+			</div>
+			<div class="line outer-4">
+				<div class="element inner-1" title="25%"><span>outer-4 - inner-1</span></div><div class="element inner-3" title="75%"><span>outer-4 - inner-3</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-2" title="40%"><span>outer-5 - inner-2</span></div><div class="element inner-3" title="60%"><span>outer-5 - inner-3</span></div>
+			</div>
+		</div>
+		<div class="feature">
+			<h3>Responsive width - offset</h3>
+			<div class="line outer-5">
+				<div class="element inner-1" title="0%"><span>no offset</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-1 offset-1" title="20%"><span>offset-1</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-1 offset-2" title="40%"><span>offset-2</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-1 offset-3" title="60%"><span>offset-3</span></div>
+			</div>
+			<div class="line outer-5">
+				<div class="element inner-1 offset-4" title="80%"><span>offset-4</span></div>
+			</div>
+		</div>
+		<hr/>
+		<h2>Source code:</h2>
+		<hr/>
+		<div class="feature">
+			<h3>Simple sourcecode:</h3>
+			<div class="sources">
+				<span>function helloCode(user) {</span>
+				<span>	var text = "Hello World! Your name is " + user;</span>
+				<span>	console.log(text);</span>
+				<span>}</span>
+				<span></span>
+				<span>$(function() {</span>
+				<span>	var user = $("#user-input").val();</span>
+				<span>	console.log("Starting the app!");</span>
+				<span></span>
+				<span>	helloCode(user);</span>
+				<span>});</span>
+			</div>
+			<h3>Simple sourcecode with numbered rows:</h3>
+			<div class="sources rownumbers">
+				<span>function helloCode(user) {</span>
+				<span>	var text = "Hello World! Your name is " + user;</span>
+				<span>	console.log(text);</span>
+				<span>}</span>
+				<span></span>
+				<span>$(function() {</span>
+				<span>	var user = $("#user-input").val();</span>
+				<span>	console.log("Starting the app!");</span>
+				<span></span>
+				<span>	helloCode(user);</span>
+				<span>});</span>
+			</div>
+			<h3>Simple sourcecode with container:</h3>
+			<div class="sources container">
+				<span>function helloCode(user) {</span>
+				<span>	var text = "Hello World! Your name is " + user;</span>
+				<span>	console.log(text);</span>
+				<span>}</span>
+				<span></span>
+				<span>$(function() {</span>
+				<span>	var user = $("#user-input").val();</span>
+				<span>	console.log("Starting the app!");</span>
+				<span></span>
+				<span>	helloCode(user);</span>
+				<span>});</span>
+			</div>
+			<h3>Simple sourcecode with container and numbered rows:</h3>
+			<div class="sources container rownumbers">
+				<span>function helloCode(user) {</span>
+				<span>	var text = "Hello World! Your name is " + user;</span>
+				<span>	console.log(text);</span>
+				<span>}</span>
+				<span></span>
+				<span>$(function() {</span>
+				<span>	var user = $("#user-input").val();</span>
+				<span>	console.log("Starting the app!");</span>
+				<span></span>
+				<span>	helloCode(user);</span>
+				<span>});</span>
+			</div>
+		</div>
 		<hr/>
 		<h2>Planned features:</h2>
 		<hr/>
 		<ul class="feature-list">
-			<li>Responsive utilities</li>
 			<li>Navigations, tabs, breadcumbs</li>
 			<li>Pagination</li>
 			<li>Labels</li>

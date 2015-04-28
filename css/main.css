@@ -48,4 +48,37 @@ hr {
     .feature-list li:hover {
       background-color: #f4f4f4; }
 
+.line {
+  width: 100%;
+  height: 25px;
+  margin: 10px;
+  border: 1px solid #4f4f4f;
+  border-radius: 10px;
+  background-color: #eaeaea; }
+  .line .element {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #c1c1c1;
+    text-align: center;
+    font-size: 1.3em;
+    color: white;
+    cursor: default;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+    .line .element:after {
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      display: none; }
+    .line .element:hover {
+      background-color: #cecece; }
+      .line .element:hover span {
+        display: none; }
+      .line .element:hover:after {
+        display: block;
+        content: attr(title); }
+
 /*# sourceMappingURL=main.css.map */
