@@ -1,9 +1,11 @@
 /*
- *	Its not part of the framework! Only for test purpose!	
+ *	Its not part of the framework! Only for test purpose!
  */
 
 $gray: #4f4f4f;
 $light-gray: #c1c1c1;
+$dirty-white: #eaeaea;
+$hover-gray: #9f9f9f;
 
 body {
 	margin: 0;
@@ -48,7 +50,7 @@ hr {
 }
 
 //Temporary
-.list {
+.feature-list {
 	list-style-type: none;
 	width: 80%;
 	margin: 8px auto;
@@ -61,6 +63,41 @@ hr {
 
 		&:hover {
 			background-color: lighten($light-gray, 20%);
+		}
+	}
+}
+
+.line {
+	width: 100%;
+	height: 25px;
+	margin: 10px;
+	border: 1px solid $gray;
+	border-radius: 10px;
+	background-color: $dirty-white;
+
+	.element {
+		height: 100%;
+		border-radius: 10px;
+		background-color: $light-gray;
+		text-align: center;
+		font-size: 1.3em;
+		color: white;
+		cursor: default;
+		-webkit-transition-duration: 0.3s;
+		-moz-transition-duration: 0.3s;
+		-o-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+
+		&:hover {
+			background-color: lighten($light-gray, 5%);
+
+			span {
+				display: none;
+			}
+
+			&:after {
+				content: attr(title);
+			}
 		}
 	}
 }
