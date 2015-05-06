@@ -651,7 +651,7 @@
 				<span>});</span>
 			</div>
 			<h3>Simple sourcecode with container:</h3>
-			<div class="sources container">
+			<div class="sources code-container">
 				<span>function helloCode(user) {</span>
 				<span>	var text = "Hello World! Your name is " + user;</span>
 				<span>	console.log(text);</span>
@@ -665,7 +665,7 @@
 				<span>});</span>
 			</div>
 			<h3>Simple sourcecode with container and numbered rows:</h3>
-			<div class="sources container rownumbers">
+			<div class="sources code-container rownumbers">
 				<span>function helloCode(user) {</span>
 				<span>	var text = "Hello World! Your name is " + user;</span>
 				<span>	console.log(text);</span>
@@ -680,20 +680,253 @@
 			</div>
 		</div>
 		<hr/>
+		<h2>Source code:</h2>
+		<hr/>
+		<div class="feature">
+			<div class="toggle-box">
+				<div class="wrapper">
+					<input type="radio" id="box-label1" name="box-label" class="toggle" checked></input>
+					<label for="box-label1" class="box-label">A label for toggle box</label>
+					<div class="box-content">A content with a plenty of display. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+				<div class="wrapper">
+					<input type="radio" id="box-label2" name="box-label" class="toggle"></input>
+					<label for="box-label2" class="box-label">B label for toggle box</label>
+					<div class="box-content">B content with a plenty of display. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+				<div class="wrapper">
+					<input type="radio" id="box-label3" name="box-label" class="toggle"></input>
+					<label for="box-label3" class="box-label">C label for toggle box</label>
+					<div class="box-content">C content with a plenty of display. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+				<div class="wrapper">
+					<input type="radio" id="box-label4" name="box-label" class="toggle"></input>
+					<label for="box-label4" class="box-label">D label for toggle box</label>
+					<div class="box-content">D content with a plenty of display. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<h2>Breadcrumb:</h2>
+		<hr/>
+		<div class="feature">
+			<ul class="breadcrumb">
+				<li class="active">Active</li>
+				<li><a href="#">Default separator</a></li>
+				<li><a href="#">Default separator</a></li>
+				<li><a href="#">Default separator</a></li>
+			</ul>
+			<ul class="breadcrumb dots border">
+				<li><a href="#">Dot separator</a></li>
+				<li class="active">Dot separator</li>
+				<li><a href="#">Dot separator</a></li>
+				<li><a href="#">Dot separator</a></li>
+			</ul>
+			<ul class="breadcrumb lines">
+				<li><a href="#">Line separator</a></li>
+				<li><a href="#">Line separator</a></li>
+				<li class="active">Line separator</li>
+				<li><a href="#">Line separator</a></li>
+			</ul>
+			<ul class="breadcrumb pipes border">
+				<li><a href="#">Pipe separator</a></li>
+				<li><a href="#">Pipe separator</a></li>
+				<li><a href="#">Pipe separator</a></li>
+				<li class="active">Pipe separator</li>
+			</ul>
+		</div>
+		<hr/>
+		<h2>Navigation:</h2>
+		<hr/>
+		<div class="feature">
+			<h3>Default</h3>
+			<nav class="pagination">
+				<ul>
+					<li><a href="#"><<</a></li>
+					<li><a href="#"><</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">10</a></li>
+					<li class="active"><a href="#">11</a></li>
+					<li><a href="#">12</a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">42</a></li>
+					<li><a href="#">43</a></li>
+					<li><a href="#">44</a></li>
+					<li><a href="#">></a></li>
+					<li><a href="#">>></a></li>
+				</ul>
+			</nav>
+			<h3>Rounded</h3>
+			<nav class="pagination rounded">
+				<ul>
+					<li><a href="#"><<</a></li>
+					<li><a href="#"><</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">10</a></li>
+					<li class="active"><a href="#">11</a></li>
+					<li><a href="#">12</a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">42</a></li>
+					<li><a href="#">43</a></li>
+					<li><a href="#">44</a></li>
+					<li><a href="#">></a></li>
+					<li><a href="#">>></a></li>
+				</ul>
+			</nav>
+		</div>
+		<hr/>
+		<h2>Badges</h2>
+		<hr/>
+		<div class="feature">
+			<span class="badge">Default badge</span>
+			<span class="badge primary">Primary badge</span>
+			<span class="badge info">Info badge</span>
+			<span class="badge warning">Warning badge</span>
+			<span class="badge error">Error badge</span>
+			<span class="badge success">Success badge</span>
+		</div>
+		<hr/>
 		<h2>Planned features:</h2>
 		<hr/>
-		<ul class="feature-list">
-			<li>Navigations, tabs, breadcumbs</li>
-			<li>Pagination</li>
-			<li>Labels</li>
-			<li>Containers</li>
-			<li>Alerts</li>
-			<li>Progress bars</li>
-			<li>And other fancy stuffs... ! :)</li>
-		</ul>
+		<div class="feature">
+			<div class="container xs-sized">
+				<h3>XS sized container</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="container s-sized">
+				<h3>S sized container</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="container">
+				<h3>Normal sized container</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="container l-sized">
+				<h3>L sized container</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="container xl-sized">
+				<h3>XL sized container</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<hr/>
+		<h2>Alerts</h2>
+		<hr/>
+		<div class="feature">
+			<div class="alert">
+				Default alert!
+			</div>
+			<div class="alert primary">
+				Primary alert!
+			</div>
+			<div class="alert info">
+				Info alert!
+			</div>
+			<div class="alert warning">
+				Warning alert!
+			</div>
+			<div class="alert error">
+				Error alert!
+			</div>
+			<div class="alert success">
+				Success alert!
+			</div>
+		</div>
+		<hr/>
+		<h2>Progress bar</h2>
+		<hr/>
+		<div class="feature">
+			<h3>Normal bars</h3>
+			<div class="progress">
+				<div class="bar" style="width: 20%"><span class="indicator">20%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar primary" style="width: 40%"><span class="indicator">40%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar info" style="width: 60%"><span class="indicator">60%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar warning" style="width: 80%"><span class="indicator">80%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar error" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar success" style="width: 50%"><span class="indicator">50%</span></div>
+			</div>
+			<h3>Stripped bars</h3>
+			<div class="progress">
+				<div class="bar stripped" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped primary" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped info" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped warning" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped error" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped success" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<h3>Animated bars</h3>
+			<div class="progress">
+				<div class="bar stripped animated" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped animated primary" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped animated info" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped animated warning" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped animated error" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar stripped animated success" style="width: 100%"><span class="indicator">100%</span></div>
+			</div>
+			<h3>Mixed bars</h3>
+			<div class="progress">
+				<div class="bar primary" style="width: 40%">
+					<span class="indicator">40%</span></div><div class="bar" style="width: 20%">
+					<span class="indicator">20%</span></div><div class="bar info" style="width: 40%">
+					<span class="indicator">40%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar error" style="width: 40%">
+					<span class="indicator">40%</span></div><div class="bar warning" style="width: 20%">
+					<span class="indicator">20%</span></div><div class="bar success" style="width: 40%">
+					<span class="indicator">40%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar primary stripped animated" style="width: 40%">
+					<span class="indicator">40%</span></div><div class="bar stripped" style="width: 20%">
+					<span class="indicator">20%</span></div><div class="bar info stripped animated" style="width: 40%">
+					<span class="indicator">40%</span></div>
+			</div>
+			<div class="progress">
+				<div class="bar error stripped" style="width: 40%">
+					<span class="indicator">40%</span></div><div class="bar warning stripped animated" style="width: 20%">
+					<span class="indicator">20%</span></div><div class="bar success stripped" style="width: 40%">
+					<span class="indicator">40%</span></div>
+			</div>
+		</div>
+		<hr/>
 	</div>
-	<footer>
-	</footer>
 </body>
-
 </html>
