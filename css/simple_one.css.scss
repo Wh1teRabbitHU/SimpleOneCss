@@ -22,8 +22,6 @@ $red: #f73500;
 $light-blue: #00C8F8;
 $dark-blue: #3B5998;
 
-$font-family: "Trebuchet MS", Helvetica, sans-serif;
-
 $btn-types:   (primary: $dark-blue, info: $light-blue, warning: $yellow, error: $red, success: $green);
 $label-types: (primary: $dark-blue, info: $light-blue, warning: $yellow, error: $red, success: $green);
 $progressbar-types: (primary: $dark-blue, info: $light-blue, warning: $yellow, error: $red, success: $green);
@@ -204,7 +202,6 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	cursor: pointer;
 	border-style: solid;
 	outline: 0;
-	font-family: $font-family;
 
 	@include transition-duration(0.3s);
 	@include btn-size(3);
@@ -292,7 +289,6 @@ textarea.input {
 }
 
 .form-container {
-	font-family: $font-family;
 	padding: 6px 0;
 }
 

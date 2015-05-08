@@ -28,7 +28,6 @@
   cursor: pointer;
   border-style: solid;
   outline: 0;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -416,7 +415,6 @@ textarea.input {
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s; }
 
 .form-container {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding: 6px 0; }
 
 .table {
