@@ -45,7 +45,6 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 		&[title]:before {
 			content: attr(title);
 			position: absolute;
-			padding: 10px;
 			left: -25%;
 			bottom: 120%;
 			width: 150%;
@@ -611,12 +610,15 @@ input.toggle[type='checkbox'] {
 		background-color: $dirty-white;
 	}
 
-	span {
+	span,
+	pre {
+		margin: 0;
 		white-space: pre-wrap;
 		display: block;
 	}
 
-	&.rownumbers span {
+	&.rownumbers span,
+	&.rownumbers pre {
 		counter-increment: section;
 
 		&:before {
@@ -774,6 +776,8 @@ input.toggle[type='checkbox'] {
 	color: $white;
 	background-color: $light-gray;
 	border-radius: 6px;
+	white-space: nowrap;
+	display: inline-block;
 
 	@each $class, $color in $label-types {
 		&.#{$class} {

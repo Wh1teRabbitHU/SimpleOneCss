@@ -45,7 +45,6 @@
     .btn:hover[title]:before, .navtab .tab-label:hover[title]:before {
       content: attr(title);
       position: absolute;
-      padding: 10px;
       left: -25%;
       bottom: 120%;
       width: 150%;
@@ -92,7 +91,6 @@
       .btn.primary:hover[title]:before, .navtab .primary.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
-        padding: 10px;
         left: -25%;
         bottom: 120%;
         width: 150%;
@@ -119,7 +117,6 @@
       .btn.info:hover[title]:before, .navtab .info.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
-        padding: 10px;
         left: -25%;
         bottom: 120%;
         width: 150%;
@@ -146,7 +143,6 @@
       .btn.warning:hover[title]:before, .navtab .warning.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
-        padding: 10px;
         left: -25%;
         bottom: 120%;
         width: 150%;
@@ -173,7 +169,6 @@
       .btn.error:hover[title]:before, .navtab .error.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
-        padding: 10px;
         left: -25%;
         bottom: 120%;
         width: 150%;
@@ -200,7 +195,6 @@
       .btn.success:hover[title]:before, .navtab .success.tab-label:hover[title]:before {
         content: attr(title);
         position: absolute;
-        padding: 10px;
         left: -25%;
         bottom: 120%;
         width: 150%;
@@ -756,12 +750,14 @@ input.toggle[type='checkbox'] {
     border: 1px solid #4f4f4f;
     border-radius: 16px;
     background-color: #eaeaea; }
-  .sources span {
+  .sources span,
+  .sources pre {
+    margin: 0;
     white-space: pre-wrap;
     display: block; }
-  .sources.rownumbers span {
+  .sources.rownumbers span, .sources.rownumbers pre {
     counter-increment: section; }
-    .sources.rownumbers span:before {
+    .sources.rownumbers span:before, .sources.rownumbers pre:before {
       content: counter(section) ".	";
       color: #c1c1c1; }
 
@@ -870,7 +866,9 @@ input.toggle[type='checkbox'] {
   margin: 6px;
   color: #ffffff;
   background-color: #c1c1c1;
-  border-radius: 6px; }
+  border-radius: 6px;
+  white-space: nowrap;
+  display: inline-block; }
   .badge.primary {
     background-color: #3B5998; }
   .badge.info {
