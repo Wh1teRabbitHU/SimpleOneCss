@@ -1,9 +1,7 @@
 # SimpleOneCss
 Its a lightweight design framework, used only css3 elements!
 
-## Documentation in progress, please be patient!
-
-For now, you can check the test page for this framework:
+You should check the following page for live examples:
 
 [Test page](www.thewhiterabbit.hu/simple_one_css)
 
@@ -28,7 +26,8 @@ For now, you can check the test page for this framework:
 
 # Documentation
 
-I try to make every function clear in this part. If something is missing, you can always check the html code and try it in the used way (at the test page). But i try to not left anything out! ;) Oh and sorry for my english... :P
+I try to make every function clear in this part. If something is missing, you can always check the html code and try it in the used way (at the test page). But i try to not left anything out here! ;)
+Oh and sorry for my english... Hope it wont kill anyone... :P
 
 ## Buttons
 
