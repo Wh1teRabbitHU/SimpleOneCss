@@ -3,7 +3,7 @@ Its a lightweight design framework, used only css3 elements!
 
 You should check the following page for live examples:
 
-[Test page](http://www.thewhiterabbit.hu/simple_one_css)
+[Test page](http://wh1terabbithu.github.io/SimpleOneCss/)
 
 ## Feature list:
 
