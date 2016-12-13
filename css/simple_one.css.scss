@@ -12,7 +12,7 @@
 $white: #ffffff;
 $black: #000000;
 $dark-gray: #2f2f2f;
-$gray: #4f4f4f;
+$gray: #5e5e5e;
 $dirty-white: #eaeaea;
 $hover-gray: #9f9f9f;
 $light-gray: #c1c1c1;
@@ -36,7 +36,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 @mixin btn-colors($color) {
 	border-color: $color;
 	color: $color;
-		
+
 	&:hover {
 		background-color: $color;
 		color: $white;
@@ -45,9 +45,10 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 		&[title]:before {
 			content: attr(title);
 			position: absolute;
-			left: -25%;
+			left: -54%;
 			bottom: 120%;
-			width: 150%;
+			width: 200%;
+			padding: 6px 2%;
 			z-index: 10;
 			border: 1px solid $color;
 			border-radius: 6px;
@@ -87,7 +88,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 @mixin table-colors($color) {
 	background-color: lighten($color, 36%);
-	
+
 	& td {
 		border-color: white;
 	}
@@ -117,10 +118,10 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 
 // SIZE
 @mixin btn-size($size) {
-	padding: 2px + (2px * $size) 4px + (4px * $size);
-	border-width: 1px + (1px * $size);
-	border-radius: 2px + (2px * $size);
-	font-size: 0.75em + (0.25em * $size);
+	padding: 2px * $size 4px * $size;
+	border-width: 1px * $size;
+	border-radius: 2px * $size;
+	font-size: 0.5em + (0.25em * $size);
 }
 
 @mixin input-size($size){
@@ -134,7 +135,7 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 		&.inline,
 		.form-container.inline & {
 			width: 50px * $size + 150px;
-			padding: 6px 12px;
+			padding: 8px 12px;
 		}
 	}
 }
@@ -201,10 +202,15 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 	cursor: pointer;
 	border-style: solid;
 	outline: 0;
+	vertical-align: middle;
 
 	@include transition-duration(0.3s);
 	@include btn-size(3);
 	@include btn-colors($gray);
+
+	&:focus {
+		outline:0;
+	}
 
 	@each $class, $size in $sizes {
 		&.#{$class} {
@@ -217,21 +223,26 @@ $sizes:       (xs-sized: 1, s-sized: 2, l-sized: 4, xl-sized: 5);
 			@include btn-colors($color);
 		}
 	}
+
+	&.thin {
+		border-width: 1px;
+		border-radius: 4px;
+	}
 }
 
 //Forms
 .input {
 	margin: 12px;
-	padding: 6px 12px;
+	padding: 8px 12px;
 	border-radius: 4px;
 	border-style: solid;
 	border-width: 2px;
 	font-size: 1em;
 	display: block;
 	outline: 0;
-	
+
 	@include transition-duration(0.3s);
-	@include input-colors($light-gray);
+	@include input-colors($gray);
 	@include input-size(3);
 
 	@each $class, $size in $sizes {
@@ -289,6 +300,42 @@ textarea.input {
 
 .form-container {
 	padding: 6px 0;
+
+	&.grouped {
+
+		.input,
+		.btn {
+			display: inline-block;
+			vertical-align: middle;
+			border-width: 2px;
+		}
+
+
+		& :not(:first-child):not(:last-child) {
+			border-radius: 0;
+			border-width: 2px 1px;
+		}
+
+		& :first-child {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right-width: 1px;
+		}
+
+		& :last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-left-width: 1px;
+		}
+
+		.input:not(:first-child) {
+			margin-left: 0;
+		}
+
+		.input:not(:last-child) {
+			margin-right: 0;
+		}
+	}
 }
 
 .table {
@@ -314,7 +361,8 @@ textarea.input {
 		}
 	}
 
-	&.hover {
+	&.hover,
+	&.hover.striped {
 
 		& tbody > tr {
 			@include table-hover-colors($hover-gray);
@@ -419,6 +467,7 @@ input.toggle[type='checkbox'] {
 
 .navbar {
 	background-color: $dirty-white;
+	z-index: 1;
 	padding-left: 20px;
 
 	&.fixed-top,
@@ -436,16 +485,33 @@ input.toggle[type='checkbox'] {
 		bottom: 0;
 	}
 
+	&.right-align {
+		text-align: right;
+	}
+
+	&.center-align {
+		text-align: center;
+	}
+
+	&.left-align {
+		text-align: left;
+	}
+
 	.menu,
 	.title {
 		display: inline-block;
 		cursor: pointer;
 		margin: 0 32px;
+		padding: 16px 24px;
 	}
 
 	.title {
-		padding: 16px 24px;
 		font-size: 1.5em;
+
+		a {
+			text-decoration: none;
+			color: $gray;
+		}
 
 		&:hover {
 			text-decoration: underline;
@@ -453,7 +519,7 @@ input.toggle[type='checkbox'] {
 	}
 
 	.menu {
-		padding: 0;
+		padding: 16px 0;
 		list-style-type: none;
 
 		& > li {
@@ -506,6 +572,7 @@ input.toggle[type='checkbox'] {
 		padding: 0;
 		left: 0;
 		top: 100%;
+		text-align: left;
 		border: 1px solid $dirty-white;
 
 		li {
@@ -575,10 +642,6 @@ input.toggle[type='checkbox'] {
 			background-color: lighten($light-gray, 20%);
 		}
 	}
-}
-
-.outer-1 {
-
 }
 
 @each $i-out in (1, 2, 3, 4, 5) {
@@ -867,7 +930,7 @@ input.toggle[type='checkbox'] {
 	}
 }
 
-.modal {
+.modal-window {
 
 	& > .toggle ~ .window {
 		display: none;
